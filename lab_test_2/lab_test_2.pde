@@ -3,7 +3,7 @@ float[] posX = new float[num];
 float[] posY = new float[num];
 float[] size = new float[num];
 String[] names = {"table", "can", "mat", "ash", "hole"};
-
+int index = int(random(names.length));
 
 void setup(){
   size(500,500);
@@ -13,8 +13,6 @@ void setup(){
     posX[x] = width/2;
     posY[x] = x;
     size[x] = 50;
-    
-
   }
 }
 void draw(){
@@ -25,6 +23,18 @@ void draw(){
 noFill();
     circle(posX[x], posY[x], size[x]);
   }
-  text(names[0], width/4,height/2);
+  
 
+}
+void keyPressed(){
+    if(keyPressed ){
+     if(key==' ' ){
+      text(names[index], width/4,height/2);
+     }
+     else{
+     text(names[index], width/4,height/2);
+     }
+     
+  
+}
 }
